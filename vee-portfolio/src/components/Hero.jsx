@@ -8,7 +8,7 @@ import facebook from "../assets/fb-icon.png"
 const SOCIALS = [
   { label: "Facebook", href: "https://facebook.com", icon: facebook },
   { label: "Twitter", href: "https://twitter.com", icon: "t" },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: linkedin },
+  { label: "LinkedIn", href: "https://linkedin.com/in/victory-emeh", icon: linkedin },
   { label: "Instagram", href: "https://instagram.com", icon: instagram },
 ];
 
