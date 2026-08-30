@@ -18,10 +18,7 @@ export default function About() {
     <section id="about" className="about">
       <div className="container about__inner">
         <div className="about__media">
-          <img
-            src={Vee2}
-            alt="Victory Emeh"
-          />
+          <img src={Vee2} alt="Victory Emeh" />
           {/* <ul className="about__socials">
             {SOCIALS.map((icon) => (
               <li key={icon}>
@@ -41,18 +38,16 @@ export default function About() {
           <p className="about__role">Frontend Developer</p>
 
           <p className="about__paragraph">
-            I am a results-driven Frontend Developer with
-            experience building scalable, responsive web applications
-            using React.js and modern UI technologies. I specialize in
-            reusable component architecture, API integration, and
-            performance optimization.
+            I am a results-driven Frontend Developer with experience building
+            scalable, responsive web applications using React.js and modern UI
+            technologies. I specialize in reusable component architecture, API
+            integration, and performance optimization.
           </p>
 
           <p className="about__paragraph">
             Experienced in remote collaboration and deadline-driven
-            environments, I am actively seeking the
-            opportunity to contribute to impactful, performance-focused
-            products.
+            environments, I am actively seeking the opportunity to contribute to
+            impactful, performance-focused products.
           </p>
 
           <dl className="about__grid">
@@ -65,7 +60,13 @@ export default function About() {
           </dl>
 
           <div className="about__actions">
-            <a href="#contact" className="btn btn-primary">
+            <a
+              href="/cv.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
               Download CV
             </a>
             <a href="#contact" className="btn btn-outline">

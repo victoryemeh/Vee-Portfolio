@@ -4,11 +4,18 @@ import Vee2 from "../assets/Vee2.jpeg";
 import instagram from "../assets/insta-icon.png";
 import linkedin from "../assets/linkedIn-icon.png"
 import facebook from "../assets/fb-icon.png"
+import victory from "../assets/victory.jpeg"
+import github from "../assets/github_logo_icon.webp"
+
 
 const SOCIALS = [
-  { label: "Facebook", href: "https://facebook.com", icon: facebook },
+  { label: "Github", href: "https://github.com/victoryemeh", icon: github},
   { label: "Twitter", href: "https://twitter.com", icon: "t" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/victory-emeh", icon: linkedin },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/victory-emeh",
+    icon: linkedin,
+  },
   { label: "Instagram", href: "https://instagram.com", icon: instagram },
 ];
 
@@ -46,7 +53,7 @@ export default function Hero() {
 
         <div className="hero__media">
           <div className="hero__ring">
-            <img src={Vee1} alt="a selfie of Victory Emeh" />
+            <img src={victory} alt="a selfie of Victory Emeh" />
           </div>
         </div>
       </div>

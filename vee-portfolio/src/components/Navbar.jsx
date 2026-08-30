@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
+
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
@@ -21,13 +22,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+    <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="container navbar__inner">
         <Link to="/" className="navbar__logo">
           VeeCodes
         </Link>
 
-        <nav className={`navbar__links ${open ? 'is-open' : ''}`}>
+        <nav className={`navbar__links ${open ? "is-open" : ""}`}>
           {NAV_LINKS.map((link) => (
             <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
               {link.label}
@@ -35,12 +36,18 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a href="#contact" className="btn btn-primary navbar__cta">
+        <a
+          href="/cv.pdf"
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary navbar__cta"
+        >
           Download CV
         </a>
 
         <button
-          className={`navbar__burger ${open ? 'is-open' : ''}`}
+          className={`navbar__burger ${open ? "is-open" : ""}`}
           aria-label="Toggle navigation menu"
           aria-expanded={open}
           onClick={() => setOpen((prev) => !prev)}
