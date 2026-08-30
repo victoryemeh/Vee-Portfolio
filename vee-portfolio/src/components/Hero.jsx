@@ -2,7 +2,7 @@ import "./Hero.css";
 import Vee1 from "../assets/Vee1.jpeg";
 import Vee2 from "../assets/Vee2.jpeg";
 import instagram from "../assets/insta-icon.png";
-import linkedin from "../assets/linkedin-icon.png"
+import linkedin from "../assets/linkedIn-icon.png"
 import facebook from "../assets/fb-icon.png"
 
 const SOCIALS = [
