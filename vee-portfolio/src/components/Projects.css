@@ -115,6 +115,39 @@
   color: #16110a;
 }
 
+.projects__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 32px;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--orange);
+  background: var(--orange);
+  color: #16110a;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.projects__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 106, 0, 0.25);
+}
+
+.projects__cta-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(22, 17, 10, 0.08);
+}
+
 @media (max-width: 900px) {
   .projects__grid {
     grid-template-columns: 1fr;
