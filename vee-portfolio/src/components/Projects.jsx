@@ -62,9 +62,15 @@ export default function Projects() {
         <div className="projects__grid">
           {PROJECTS.map((project) => (
             <article className="project-card" key={project.title}>
-              <div className="project-card__thumb">
+              <a
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
+                className="project-card__thumb"
+                aria-label={`Visit ${project.title}`}
+              >
                 <img src={project.image} alt={project.title} loading="lazy" />
-              </div>
+              </a>
               <div className="project-card__footer">
                 <h3>{project.title}</h3>
                 <p>{project.info}</p>
@@ -83,10 +89,10 @@ export default function Projects() {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-arrow-up-right preview-icon"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-arrow-up-right preview-icon"
                     >
                       <path d="M7 7h10v10" />
                       <path d="M7 17 17 7" />
@@ -113,10 +119,10 @@ export default function Projects() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-up-right preview-icon"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-arrow-up-right preview-icon"
             >
               <path d="M7 7h10v10" />
               <path d="M7 17 17 7" />

@@ -1,12 +1,27 @@
-import { useState } from 'react';
-import './Contact.css';
+import { useState } from "react";
+import "./Contact.css";
 
 export default function Contact() {
-  const [status, setStatus] = useState('idle');
+  const [status, setStatus] = useState("idle");
 
   function handleSubmit(e) {
     e.preventDefault();
-    setStatus('sent');
+
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name").trim();
+    const email = formData.get("email").trim();
+    const message = formData.get("message").trim();
+
+    const text = encodeURIComponent(
+      `Hello Victory, I'm ${name}.\n\nEmail: ${email}\n\nMessage:\n${message}`,
+    );
+
+    setStatus("sent");
+    window.open(
+      `https://wa.me/2347046860345?text=${text}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
   }
 
   return (
@@ -24,12 +39,24 @@ export default function Contact() {
             <label className="sr-only" htmlFor="name">
               Name
             </label>
-            <input id="name" name="name" type="text" placeholder="Your Name" required />
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your Name"
+              required
+            />
 
             <label className="sr-only" htmlFor="email">
               Email
             </label>
-            <input id="email" name="email" type="email" placeholder="Your Email" required />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Your Email"
+              required
+            />
           </div>
 
           <label className="sr-only" htmlFor="message">
@@ -44,7 +71,7 @@ export default function Contact() {
           />
 
           <button type="submit" className="btn btn-primary">
-            {status === 'sent' ? 'Message Sent' : 'Send Message'}
+            {status === "sent" ? "Message Sent" : "Send Message"}
           </button>
         </form>
       </div>
